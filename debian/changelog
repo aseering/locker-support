@@ -1,3 +1,9 @@
+debathena-locker-support (10.4.7-0debathena3) unstable; urgency=medium
+
+  * Port to Python 3
+
+ -- root <root@5abd44f7c553>  Fri, 28 Oct 2022 02:26:15 -0400
+
 debathena-locker-support (10.4.7-0debathena2) unstable; urgency=medium
 
   * Replace python-support with dh-python

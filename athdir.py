@@ -1,6 +1,8 @@
 """
 A Python re-implementation of Athena's libathdir
 """
+from __future__ import unicode_literals
+from builtins import object
 import os
 import subprocess
 import sys
@@ -33,7 +35,7 @@ class AthdirError(Exception):
 class AthdirInternalError(AthdirError):
     pass
 
-class Flavors():
+class Flavors(object):
     """
     An enum-esque thing representing the various "flavors" of
     directories we can request.
@@ -50,7 +52,7 @@ class Flavors():
                        }
 
 
-class AthdirConvention():
+class AthdirConvention(object):
     """
     The various types of "conventions" we have for paths, such
     as arch-dependent, old-style sysnames and machnames, etc.
@@ -92,7 +94,7 @@ class AthdirConvention():
                   }
         return "AthdirConvention: %s (%s%s%s)" % (self.template, ''.join([k for k,v in Flavors.printableFlags.items() if self.flavors[v]]), '@' if self.atsys else '', 'C' if self.custom else '')
 
-class Athdir():
+class Athdir(object):
     _indepTypes = ("man", "include")
     # We are NOT adding any new ones below
     _sysFlavors = ("bin", "lib", "etc")

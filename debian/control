@@ -2,15 +2,15 @@ Source: debathena-locker-support
 Section: debathena/net
 Priority: extra
 Maintainer: Debathena Project <debathena@mit.edu>
-Build-Depends: debhelper (>= 7.0.50~), python (>= 2.6.6-3~), python2.7
+Build-Depends: debhelper (>= 7.0.50~), python3 (>= 3.6~), dh-python
 Standards-Version: 3.9.3
 
 Package: debathena-locker-support
 Architecture: all
 Depends: ${misc:Depends},
  ${python:Depends},
- python-afs (>= 0.2.0-1~),
- python-hesiod (>= 0.2.11~),
+ python3-afs (>= 0.2.0-1~),
+ python3-hesiod (>= 0.2.11~),
 X-Python-Version: 2.7
 Description: Python modules for Athena's "locker" framework
  This package provides the "locker" and "athdir" modules,
@@ -20,7 +20,7 @@ Package: debathena-attach
 Architecture: all
 Provides: attach
 Depends: debathena-locker-support, ${misc:Depends}, ${python:Depends}
-X-Python-Version: 2.7
+X-Python-Version: 3.6
 Description: Athena utility to attach a remote file system to the workstation
  The attach utility is a filesystem-independent utility which allows you
  to attach a filesystem to a directory hierarchy on a workstation.
@@ -30,7 +30,7 @@ Package: debathena-athdir
 Architecture: all
 Provides: athdir
 Depends: debathena-locker-support, ${misc:Depends}, ${python:Depends}
-X-Python-Version: 2.7
+X-Python-Version: 3.6
 Description: Utility to find machine-specific directories using Athena conventions
  The athdir utility is used to locate specific types of files in an
  Athena locker.  It knows about all the conventions for compatibility
@@ -42,7 +42,7 @@ Package: debathena-quota
 Architecture: all
 Depends: debathena-locker-support, ${misc:Depends}, ${python:Depends}
 Suggests: debathena-quota-config
-X-Python-Version: 2.7
+X-Python-Version: 3.6
 Description: Print disk usage and quota limits
  Quota displays a user's disk usage and limits on local and NFS mounted
  file systems, as well as AFS lockers that have been attached. If a user

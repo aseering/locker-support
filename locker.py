@@ -2,6 +2,8 @@
 A modern re-interpretation of Athena's liblocker, in Python.
 """
 from __future__ import division
+from __future__ import unicode_literals
+from builtins import object
 import math
 import errno, re, os, pwd
 import logging

@@ -1,3 +1,4 @@
+from __future__ import unicode_literals
 from distutils.core import setup
 
 setup(name='locker-support',
